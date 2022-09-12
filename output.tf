@@ -18,8 +18,8 @@ output "monitoring_zagovorov_ru_ip_addr_internal" {
   value = yandex_compute_instance.monitoring_instance.network_interface.0.ip_address
 }
 
-output "github_zagovorov_ru_ip_addr_internal" {
-  value = yandex_compute_instance.github_instance.network_interface.0.ip_address
+output "gitlab_zagovorov_ru_ip_addr_internal" {
+  value = yandex_compute_instance.gitlab_instance.network_interface.0.ip_address
 }
 
 output "runner_zagovorov_ru_ip_addr_internal" {
