@@ -33,42 +33,42 @@ output "ssh_config" {
     User ubuntu
     IdentityFile ~/.ssh/id_rsa
 
-  Host db01.zagovorov.ru
+  Host db01.zagovoroff.ru
     HostName ${yandex_compute_instance.db01_instance.network_interface.0.ip_address}
     User ubuntu
     IdentityFile ~/.ssh/id_rsa
       ProxyJump ubuntu@${yandex_compute_instance.nat_instance.network_interface.0.nat_ip_address}
       ProxyCommand ssh -W %h:%p -i .ssh/id_rsa
 
-  Host db02.zagovorov.ru
+  Host db02.zagovoroff.ru
     HostName ${yandex_compute_instance.db02_instance.network_interface.0.ip_address}
     User ubuntu
     IdentityFile ~/.ssh/id_rsa
       ProxyJump ubuntu@${yandex_compute_instance.nat_instance.network_interface.0.nat_ip_address}
       ProxyCommand ssh -W %h:%p -i .ssh/id_rsa
 
-  Host app.zagovorov.ru
+  Host app.zagovoroff.ru
     HostName ${yandex_compute_instance.app_instance.network_interface.0.ip_address}
     User ubuntu
     IdentityFile ~/.ssh/id_rsa
       ProxyJump ubuntu@${yandex_compute_instance.nat_instance.network_interface.0.nat_ip_address}
       ProxyCommand ssh -W %h:%p -i .ssh/id_rsa
 
-  Host monitoring.zagovorov.ru
+  Host monitoring.zagovoroff.ru
     HostName ${yandex_compute_instance.monitoring_instance.network_interface.0.ip_address}
     User ubuntu
     IdentityFile ~/.ssh/id_rsa
       ProxyJump ubuntu@${yandex_compute_instance.nat_instance.network_interface.0.nat_ip_address}
       ProxyCommand ssh -W %h:%p -i .ssh/id_rsa
 
-  Host gitlab.zagovorov.ru
+  Host gitlab.zagovoroff.ru
     HostName ${yandex_compute_instance.gitlab_instance.network_interface.0.ip_address}
     User ubuntu
     IdentityFile ~/.ssh/id_rsa
       ProxyJump ubuntu@${yandex_compute_instance.nat_instance.network_interface.0.nat_ip_address}
       ProxyCommand ssh -W %h:%p -i .ssh/id_rsa
 
-  Host runner.zagovorov.ru
+  Host runner.zagovoroff.ru
     HostName ${yandex_compute_instance.runner_instance.network_interface.0.ip_address}
     User ubuntu
     IdentityFile ~/.ssh/id_rsa
